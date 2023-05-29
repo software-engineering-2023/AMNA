@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Set Reminders
+    </title>
+    <head>
+      <h2>My Bank Account Number:<br> 133675342554 </h2>
+      <br>
+      <label><h2> My Credit Card Number :<br> 1221-3124-5664-5243 </h2> </label>
+  </head>
+    <body style=" background-color: lightgrey;">
+<label>
+  <br>
+<h2>Set a specific Date to Receive Reminders: </h2>
+</label>
+<br>
+<br>
+<li><input type="datetime"  placeholder="datetime" name="date" required/></li>
+<br>
+<br>
+<li><input type="time"  placeholder="time" name="time" required/></li>
+<br> 
+<br>
+<br>
+  <script>
+    function myfunction(){
+      alert("The Reminder has been saved successfully!");
+    }
+  </script>
+  <select id="Please Choose the Bill Type " onchange="redirectToPage()">
+  <option value="" disabled selected>Choose the Reminder Type</option>
+  <option value="Loan Bill">Loan Bill</option>
+  <option value="Credit Card Bill">Credit Card Bill</option>
+  <option value="Gas">Gas Bills</option>
+   <option value="Water">Water Bills</option>
+   <option value=" Electricity ">Electricity Bills</option>
+   <option value=" Telephone ">Telephone Bills</option>
+</select>
+<br>
+<br>
+<br>
+   <button onclick="myfunction()"> Set this Reminder </button>
+<br>
+   <script>
+    function redirectToPage() {
+      window.location.href = "Client.html";
+    }
+  </script>
+  <br>
+  <button onclick=redirectToPage()>Back </button> 
+</body>
+</html>
