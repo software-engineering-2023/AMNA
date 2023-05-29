@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>  Credit Card Bill</title>
+<h2> Credit Card Bill Payment </h2>
+</head>
+<body style=" background-color: lightgrey;">
+  <br>
+    <label><h2> My Credit Card Number :<br> 1221-3124-5664-5243 </h2> </label>
+    <br>
+    <label> Enter an Amount:</label>
+    <br>
+    <li><input type="number" placeholder="Amount" name=" Enter an Amount" required/></li>
+    <br>
+           <select id="Please Choose the Way of Payment ">
+        <option value="" disabled selected>Please Choose the Way of Payment</option>
+        <option value="Fully Payment">Fully Payment</option>
+        <option value="Partially Payment">Partially Payment</option>
+   </select>
+   <br>
+   <br>
+   <button onclick="myfunction()"> Confirm Payment</button><script>
+   function myfunction(){
+          alert("Your Credit Card Payment has been Completed!!");
+        }
+    </script>
+    <script>
+      function redirectToPage() {
+        window.location.href = "Client.html";
+      }
+    </script>
+    <br>
+    <button onclick=redirectToPage()>Back </button> 
+</body>
+</html>
