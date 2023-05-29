@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
+		<meta charset="utf-8">
+		<link href="css/loginstyle.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text.css'/>
+		<!--//webfonts-->
+</head>
+<body onload="get()">
+	<div class="main">
+		<div class="header" >
+			<h1>Login or Create a Free Account!</h1>
+		</div>
+		
+			<form>
+				<ul class="left-form">
+					<p id="savedText"></p>
+					<p id="openedText"></p>
+					<h2>New Account:</h2>
+					<li>
+						<input type="text"   placeholder="Username" required/>
+						<a href="#" class="icon ticker"> </a>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="text"   placeholder="Email" required/>
+						<a href="#" class="icon ticker"> </a>
+						<div class="clear"> </div>
+					</li> 
+					<li>
+						<input type="password"   placeholder="password" required/>
+						<a href="#" class="icon into"> </a>
+						<div class="clear"> </div>
+					</li> 
+					<li class="select">
+						<select name="format" id="format">
+							<option selected disabled>Choose an account type</option>
+							<option value="Client">Client</option>
+							<option value="Banker">Banker</option>
+							<option value="Admin">Admin</option>
+						</select>
+					</li> 
+					
+					
+					<button oneclick="save"> Create Account </button>
+				</ul>
+				<ul class="right-form">
+					<h3>Login:</h3>
+					<div>
+						<form action="#" method="post" name="login">
+						<li><input type="text"  placeholder="Username" name="userid" required/></li>
+						<li> <input type="password"  placeholder="Password" name="pswrd" required/></li>
+						<h4>I forgot my Password!</h4>
+							<input type="submit" onclick="check(this.form)" value="Login" >
+					       </form>
+					</div>
+					<div class="clear"> </div>
+				</ul>
+				<div class="clear"> </div>
+					
+			</form>
+			
+		</div>
+		
+		<script type="text/javascript">
+		function check(form)/*function to check userid & password*/ 
+		
+			/*the following code checkes whether the entered userid and password are matching*/
+			 {
+				if (form.userid.value == "admin" && form.pswrd.value == "admin")
+				window.open('Admin.html')/*opens the target page while Id & password matches*/ 
+			
+			else if (form.userid.value == "client" && form.pswrd.value == "client") 
+				window.open('Client.html')/*opens the target page while Id & password matches*/
+				else if (form.userid.value == "banker" && form.pswrd.value == "banker") 
+				window.open('Banker.html')/*opens the target page while Id & password matches*/
+
+			else if (form.userid.value == "aya" && form.pswrd.value == "aya1234") 
+				window.open('Admin.html')/*opens the target page while Id & password matches*/
+
+				else if (form.userid.value == "nerween" && form.pswrd.value == "nerween1234") 
+				window.open('Client.html')/*opens the target page while Id & password matches*/
+				
+				else if (form.userid.value == "malak" && form.pswrd.value == "malak1234")  
+				window.open('Banker.html')/*opens the target page while Id & password matches*/
+				
+			else 
+				alert("Error Password or Username")/*displays error message*/
+			
+		    }	
+		</script>
+ </body>
+</html>

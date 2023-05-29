@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>Money Transfer </title>
+</head>
+<body style=" background-color: lightgrey;">
+    <label><h2>My Bank Account Number :<br> 133675342554</label> </h2> 
+  <br>
+  <br>
+    <label> Amount To Transfer :</label>
+    <br><br>
+    <li><input type="number"  placeholder="Amount" name="Amount" required/></li>
+  <br><br><br><br>
+  <label>Bank Account of the receiver  :</label> 
+  <br><br>
+  <li><input type="Name"  placeholder="Bank Account of the receiver" name="Bank Account of the receiver" required/></li>
+  <br>
+  <br>
+  <label>Please Choose the Transfer Method:</label>
+    <br>
+  <select id="Please Choose the Transfer Type" onchange="redirectToPage()">
+    <option value="" disabled selected></option>
+    <option value="Internal">Internal</option>
+    <option value="Domestic">Domestic</option>
+    <option value=" International ">International</option>
+</select>
+<br>
+<br>
+<br>
+<button onclick="myfunction()"> Confirm Transfer</button>
+<br>
+  <script>
+        function myfunction(){
+          alert("Your Money Transfer has been transfered Successfully!!");
+        }
+    </script>
+        <script>
+          function redirectToPage1() {
+            window.location.href = "Client.html";
+          }
+        </script>
+        <br>
+        <br>
+        <button onclick=redirectToPage1()>Back </button> 
+</body>
+</html>
